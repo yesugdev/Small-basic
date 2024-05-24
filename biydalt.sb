@@ -1,0 +1,153 @@
+GraphicsWindow.Width = 800
+GraphicsWindow.Height = 600
+GraphicsWindow.FontName = "Arial"
+GraphicsWindow.FontSize = 15
+Sub menu
+  
+Btn1 = Controls.AddButton ("Онол", 10, 10)
+Btn2 = Controls.AddButton ("Арифметик прогресс тооцоологч", 10, 40)
+Btn3 = Controls.AddButton ("Геометр прогресс тооцоологч", 10, 70)
+Btn4 = Controls.AddButton ("Шалгалт 3", 10, 100)
+EndSub
+
+menu()
+
+Controls.ButtonClicked = click
+Sub Click
+  clicketButton = Controls.LastClickedButton
+  If clicketButton = Btn1 Then
+    GraphicsWindow.Clear()
+    tailbar()
+  elseif clicketButton = Btn2 then
+    GraphicsWindow.Clear()
+     calculus_ap()
+  elseif clicketButton = Btn3 then
+    GraphicsWindow.Clear()
+    calculus_gp()
+  Elseif clicketButton = Butsah then
+    GraphicsWindow.Clear()
+    menu()
+  ElseIf clicketButton  = Next then
+    GraphicsWindow.Clear()
+    slide2()
+  Elseif clicketButton = slide2_button then
+    GraphicsWindow.Clear()
+    tailbar()
+  elseif clicketButton = slide3_button then
+    GraphicsWindow.Clear()
+    slide3()
+  elseif clicketButton = Butsah1 then
+    GraphicsWindow.Clear()
+    menu()
+    
+  EndIf
+EndSub
+
+Sub tailbar
+ 
+  GraphicsWindow.Clear()
+  tailbar1 = "Математикт нэрээ мөнхөлсөн хүмүүсийн нэг бол Фибоначчи хэмээн нэрлэгдсэн дундад зууны үеийн хамгийн авьяаслаг эрдэмтэн Италийн Леонардо Писано юм. Тэрээр Liber abaci номдоо нэгэн сонирхолтой дарааллын тухай дурдсан байдаг бөгөөд хожмоо Фибоначчийн дараалал хэмээн нэрлэгджээ. Уг дарааллын эхний хоёр гишүүн нь 1-тэй тэнцүү, гуравдугаараасаа эхлээд гишүүн бүр нь өмнөх хоёр гишүүнийхээ нийлбэртэй тэнцүү. Эхний гишүүдийг бичвэл: 1 1 2 3 5 8 13 ... байна. Молтогчин туулайн үржил, алтан харьцаа гээд математик төдийгүй байгаль ертөнцийн олон зүйлс Фибоначчийн дараалалтай холбоотой байдаг. Энэ тухай та бүхэн математикийг гүнзгийрүүлэн судалснаар олж мэдэх болно."
+  GraphicsWindow.DrawBoundText(20,20,700,tailbar1)
+  result = ImageList.LoadImage("https://www.fibonicci.com/wp-content/uploads/2015/03/Fibonacci-leonardo-pisa-300x200.jpg")
+  result1 = ImageList.LoadImage("https://www.fibonicci.com/wp-content/uploads/2015/03/liber-abaci.jpg")
+  GraphicsWindow.DrawResizedImage(result, 20, 200, 300, 300)
+  GraphicsWindow.DrawResizedImage(result1, 400,200, 300, 300)
+  Butsah = Controls.AddButton ("Menu", 20, 500)
+  Next = Controls.AddButton ("Next", 700, 500)
+  
+EndSub
+Sub slide2
+  GraphicsWindow.Clear()
+  tailbar1 = "Тоон дарааллын гишүүдийг байрлалаар дугаарлаад а1 , a2 , a3 ... гэх мэт тэмдэглэнэ. an гишүүнийг n-ээс хамааруулан олох дүрмийг ерөнхий гишүүний томьёо гэнэ."
+  GraphicsWindow.DrawBoundText(20,20,700,tailbar1)
+  GraphicsWindow.DrawBoundText(250,70,700,"Арифметик прогресс")
+  progress1 = "Өмнөх гишүүн дээр нь тогтмол d тоо нэмэхэд дараагийн гишүүн нь гардаг дарааллыг арифметик прогресс гэдэг. d тоог арифметик прогрессын ялгавар гэнэ. an = an-1 + d, (an-1 нь an -ийн өмнөх гишүүн) Энэ томьёог арифметик прогрессын рекуррент томьёо гэнэ. "
+  GraphicsWindow.DrawBoundText(20,90,700,progress1)
+  jishee = "Дараалал рекуррент томьёогоор өгсөн үед эхний гишүүнийг зааж өгдөг. Жишээ нь 1, 3, 5, 7, ... дараалал d = 2 ялгавартай өсөх арифметик прогресс юм. Рекуррент томьёо нь an = an-1 + 2, a1 = 1."
+  GraphicsWindow.DrawBoundText(20,150,700,jishee)
+  progress_image1 = ImageList.LoadImage("https://www.aplustopper.com/wp-content/uploads/2016/08/Arithematic-progression-formula.jpg")
+  GraphicsWindow.DrawResizedImage(progress_image1, 250,200, 300, 300)
+  slide2_button = Controls.AddButton ("Butsah", 20, 500)
+  slide3_button = Controls.AddButton ("Next", 700, 500)
+EndSub
+Sub slide3
+  GraphicsWindow.Clear()
+  GraphicsWindow.DrawBoundText(250,20,700,"Геометр прогресс")
+  progress2 = "Геометрийн дараалал гэж нэрлэгддэг геометрийн прогресс нь эхний гишүүний дараах гишүүн бүрийг өмнөх гишүүнийг нийтлэг харьцаа гэж нэрлэгддэг тогтмол, тэг биш тоогоор үржүүлэх замаар олдог тоонуудын дараалал юм. Математикийн хувьд геометр прогрессийг: 𝑎 , 𝑎 𝑟 , 𝑎 𝑟 2 , 𝑎 𝑟 3 , … a,ar,ar 2 ,ar 3 ,… гэж илэрхийлж болно."
+  GraphicsWindow.DrawBoundText(20,50,700,progress2)
+  progress_image2 = ImageList.LoadImage("https://i.ytimg.com/vi/07J5Zs3--DE/hqdefault.jpg")
+  GraphicsWindow.DrawResizedImage(progress_image2, 250,200, 300, 300)
+  Butsah = Controls.AddButton ("Menu", 20, 500)
+EndSub
+Sub calculus_ap
+  GraphicsWindow.Clear()
+  GraphicsWindow.DrawText(10, 20, "a1 = ")
+  ap_text_box1 = Controls.AddTextBox(50, 20)
+  Controls.SetTextBoxText(ap_text_box1,"")
+  
+   GraphicsWindow.DrawText(10, 50, "d = ")
+  ap_text_box2 = Controls.AddTextBox(50, 50)
+  Controls.SetTextBoxText(ap_text_box2,"")
+  GraphicsWindow.DrawText(10, 80, "n = ")
+  ap_text_box3 = Controls.AddTextBox(50, 80)
+  Controls.SetTextBoxText(ap_text_box3,"")
+  
+  play = Controls.AddButton("Тооцоолох",10,110)
+  Controls.ButtonClicked =calcul
+  Butsah1 = Controls.AddButton ("Menu", 20, 500)
+
+EndSub
+Sub calculus_gp
+  GraphicsWindow.Clear()
+  
+EndSub
+Sub calcul
+  clicketButton = Controls.LastClickedButton
+  If clicketButton = play then
+   a1 = Controls.GetTextBoxText(ap_text_box1)
+  d = Controls.GetTextBoxText(ap_text_box2)
+  n = Controls.GetTextBoxText(ap_text_box3)
+  sum = 0
+  For i = 1 To n
+    term = a1+(i-1)*d
+    sum  = sum + term
+    GraphicsWindow.DrawBoundText(i*40+5, 140,700,term)
+  EndFor
+  GraphicsWindow.DrawText(10, 140, "ai = ")
+  GraphicsWindow.DrawText(10, 170, "Sn = " + sum)
+  GraphicsWindow.DrawText(170, 200, "an = "+term)
+  GraphicsWindow.DrawText(10, 200, "n= "+n)
+  
+  elseIf clicketButton = Btn1 Then
+    GraphicsWindow.Clear()
+    tailbar()
+  elseif clicketButton = Btn2 then
+    GraphicsWindow.Clear()
+     calculus_ap()
+  elseif clicketButton = Btn3 then
+    GraphicsWindow.Clear()
+    calculus_gp()
+  Elseif clicketButton = Butsah then
+    GraphicsWindow.Clear()
+    menu()
+  ElseIf clicketButton  = Next then
+    GraphicsWindow.Clear()
+    slide2()
+  Elseif clicketButton = slide2_button then
+    GraphicsWindow.Clear()
+    tailbar()
+  elseif clicketButton = slide3_button then
+    GraphicsWindow.Clear()
+    slide3()
+  elseif clicketButton = Butsah1 then
+    GraphicsWindow.Clear()
+    menu()
+      EndIf
+  EndSub
+  
+
+
+
+
+
+
