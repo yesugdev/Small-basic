@@ -1,0 +1,16 @@
+GraphicsWindow.BackgroundColor = "White"
+GraphicsWindow.DrawRectangle(0, 0, GraphicsWindow.Width, GraphicsWindow.Height)
+
+
+scaleX = 30
+scaleY = 50
+step = 0.1
+
+
+For x = -10 To 10 Step step
+  y1 = Math.Sin(x) * scaleY + GraphicsWindow.Height / 2
+  y2 = Math.Cos(x) * scaleY + GraphicsWindow.Height / 2
+  
+  GraphicsWindow.SetPixel(x * scaleX + GraphicsWindow.Width / 2, y1, "Blue")
+  GraphicsWindow.SetPixel(x * scaleX + GraphicsWindow.Width / 2, y2, "Red")
+EndFor

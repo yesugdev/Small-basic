@@ -1,0 +1,4 @@
+randomNumber = Math.GetRandomNumber(100) 
+TextWindow.WriteLine("Random Number: " + randomNumber)
+sqrtValue = Math.SquareRoot(randomNumber)
+TextWindow.WriteLine("Square Root of " + randomNumber + ": " + sqrtValue)

@@ -1,0 +1,9 @@
+GraphicsWindow.Width = 300
+GraphicsWindow.Height = 400
+
+
+For i = 1 To 1000
+  x = Math.GetRandomNumber(GraphicsWindow.Width)
+  y = Math.GetRandomNumber(GraphicsWindow.Height)
+  GraphicsWindow.DrawEllipse(x, y, 1, 1)
+EndFor

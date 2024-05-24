@@ -1,0 +1,27 @@
+GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+
+
+TextWindow.Write("n: ")
+n = TextWindow.ReadNumber()
+TextWindow.Write("k: ")
+k = TextWindow.ReadNumber()
+TextWindow.WriteLine("1-n hurtelh sondgoi toonuud: ")
+For i = 1 To n Step 2
+ TextWindow.Write(i + " ")
+EndFor
+sum = 0
+TextWindow.WriteLine("1-n hurtelh niilber: ")
+For i = 2 To n Step 2
+ sum = sum + i
+EndFor
+TextWindow.WriteLine(sum)
+
+
+urj = 1
+TextWindow.WriteLine("1- n k toond huvaagdaj baiwal urj: ")
+For i = 1 To n
+ If Math.Remainder(i,k) = 0 Then
+   urj = urj * i
+ EndIf
+EndFor
+TextWindow.WriteLine(urj)

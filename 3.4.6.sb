@@ -1,0 +1,22 @@
+x1 = 0
+y1 = 0
+x2 = 0
+y2 = 0
+x3 = 0
+y3 = 0
+TextWindow.Write("x1, y1: ")
+x1 = TextWindow.ReadNumber()
+y1 = TextWindow.ReadNumber()
+TextWindow.Write("x2, y2: ")
+x2 = TextWindow.ReadNumber()
+y2 = TextWindow.ReadNumber()
+TextWindow.Write("x3, y3: ")
+x3 = TextWindow.ReadNumber()
+y3 = TextWindow.ReadNumber()
+If ((x1 <> x2 Or y1 <> y2) And (x1 <> x3 Or y1 <> y3) And (x2 <> x3 Or y2 <> y3)) Then
+ If ((y2 - y1) * (x3 - x2) <> (y3 - y2) * (x2 - x1)) Then
+   TextWindow.WriteLine("Orshin baina")
+ Else   
+TextWindow.WriteLine("Ugui")
+ EndIf
+EndIf

@@ -1,0 +1,43 @@
+Өгсөн тооны к дугаар цифрийг олдог дэд программыг зохион байгуулж, дараах бодлогыг бодоорой. а. Өгсөн тооны k дугаар цифр t мөн эсэхийг тогтоох; б. Өгсөн тооны k дугаар цифр t мөн бол q цифрээр солих; в. Өгсөн тооны k дугаар цифр тэгш эсвэл сондгой эсэхийг тодорхойлох; г. Өгсөн тооны k дугаар цифр k мөн эсэхийг тогтоох.
+Function GetDigit(number, k)
+  digit = ""
+  If k > 0 And k <= Text.GetLength(number) Then
+    digit = Text.GetSubText(number, k, 1)
+  EndIf
+  Return digit
+EndFunction
+
+number = TextWindow.ReadNumber()
+k = TextWindow.ReadNumber()
+t = TextWindow.ReadNumber()
+
+' а. Өгсөн тооны k дугаар цифр t мөн эсэхийг тогтоох
+digit = GetDigit(TextWindow.NumberToString(number), k)
+If digit = TextWindow.NumberToString(t) Then
+  TextWindow.WriteLine("Тийн")
+Else
+  TextWindow.WriteLine("Үгүй")
+EndIf
+
+' б. Өгсөн тооны k дугаар цифр t мөн бол q цифрээр солих
+q = TextWindow.ReadNumber()
+If digit = TextWindow.NumberToString(t) Then
+  newNumber = Text.GetSubText(number, 1, k - 1) + TextWindow.NumberToString(q) + Text.GetSubText(number, k + 1, Text.GetLength(number) - k)
+  TextWindow.WriteLine(newNumber)
+Else
+  TextWindow.WriteLine(number)
+EndIf
+
+' в. Өгсөн тооны k дугаар цифр тэгш эсвэл сондгой эсэхийг тодорхойлох
+If digit <> "" And digit Mod 2 = 0 Then
+  TextWindow.WriteLine("Тэгш")
+ElseIf digit <> "" Then
+  TextWindow.WriteLine("Сондгой")
+EndIf
+
+' г. Өгсөн тооны k дугаар цифр k мөн эсэхийг тогтоох
+If digit = TextWindow.NumberToString(k) Then
+  TextWindow.WriteLine("Тийн")
+Else
+  TextWindow.WriteLine("Үгүй")
+EndIf

@@ -1,0 +1,10 @@
+n = TextWindow.ReadNumber("n: ")
+m = TextWindow.ReadNumber("m: ")
+m = TextWindow.ReadNumber("k: ")
+
+
+
+
+powerByM = Math.Power(n, m) ' Calculate the power of random number by n
+powerByK = Math.Power(n, k) 
+Text.WindowWriteLine(powerByM,powerByK)

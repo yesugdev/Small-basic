@@ -1,0 +1,13 @@
+n = TextWindow.ReadNumber("too: ")
+
+
+For i = 1 To n
+  randomNumber = Math.GetRandomNumber(100)  TextWindow.WriteLine("Random Number " + i + ": " + randomNumber)
+  
+  lnValue = Math.Log(randomNumber) 
+  log10Value = Math.Log10(randomNumber) 
+  
+  TextWindow.WriteLine("ln(" + randomNumber + "): " + lnValue)
+  TextWindow.WriteLine("log10(" + randomNumber + "): " + log10Value)
+  TextWindow.WriteLine()
+EndFor

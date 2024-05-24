@@ -1,0 +1,17 @@
+Дүнг тоогоор оруулахад түүний үсгэн дүнг хэвлэдэг программ бичнэ үү. p тоон үнэлгээ нь 90<=p<=100 бол A, 80<=p<=89 бол B, 70<=p<=79 бол C, 60<=p<=69 бол D, 0<=p<=59 бол F байдаг гэе.
+ p = TextWindow.ReadNumber()
+If p >= 90 And p <= 100 Then
+  grade = "A"
+ElseIf p >= 80 And p <= 89 Then
+  grade = "B"
+ElseIf p >= 70 And p <= 79 Then
+  grade = "C"
+ElseIf p >= 60 And p <= 69 Then
+  grade = "D"
+ElseIf p >= 0 And p <= 59 Then
+  grade = "F"
+Else
+  grade = "Буруу оноо"
+EndIf
+
+TextWindow.WriteLine("Үнэлгээ: " + grade)

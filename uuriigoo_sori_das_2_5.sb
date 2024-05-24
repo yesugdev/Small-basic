@@ -1,0 +1,10 @@
+GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+
+
+TextWindow.Write("n: ")
+n = TextWindow.ReadNumber()
+
+
+For i = n To 0 Step -1
+ TextWindow.Write(i + " ")
+EndFor

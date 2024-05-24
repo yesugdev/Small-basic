@@ -1,0 +1,29 @@
+GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+
+
+TextWindow.Write("a: ")
+a = TextWindow.ReadNumber()
+
+
+TextWindow.Write("b: ")
+b = TextWindow.ReadNumber()
+
+
+TextWindow.Write("c: ")
+c = TextWindow.ReadNumber()
+
+
+D = b * b - 4 * a * c
+
+
+If D < 0 Then
+ TextWindow.WriteLine("Bodit shiidgu.")
+ElseIf D = 0 Then
+ root = -b / (2 * a)
+ TextWindow.WriteLine("Gants shiidtei: " + root)
+Else
+ root1 = (-b + Math.SquareRoot(D)) / (2 * a)
+ root2 = (-b - Math.SquareRoot(D)) / (2 * a)
+ TextWindow.WriteLine("x1: " + root1)
+ TextWindow.WriteLine("x2: " + root2)
+EndIf

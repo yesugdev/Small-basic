@@ -1,0 +1,19 @@
+GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) '
+
+
+width = 400
+height = 400
+numRectangles = 200
+
+
+For i = 1 To numRectangles
+  x = Math.GetRandomNumber(width)
+ y = Math.GetRandomNumber(height)
+ rectWidth = Math.GetRandomNumber(50)
+ rectHeight = Math.GetRandomNumber(50)
+ color = GraphicsWindow.GetColorFromRGB(Math.GetRandomNumber(256), Math.GetRandomNumber(256), Math.GetRandomNumber(256))
+
+
+ GraphicsWindow.DrawRectangle(x, y, rectWidth, rectHeight)
+ GraphicsWindow.SetPixel(x, y, color)
+EndFor

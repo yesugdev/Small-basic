@@ -1,0 +1,17 @@
+b1 эхний гишүүн, q ноогдвор бүхий геометр прогрессын эхний n ширхэг гишүүний нийлбэрийг олох программ бичнэ үү.
+TextWindow.Write("b1 (эхний гишүүн) утгыг оруулна уу: ")
+b1 = TextWindow.ReadNumber()
+
+TextWindow.Write("q (ноогдвор) утгыг оруулна уу: ")
+q = TextWindow.ReadNumber()
+
+TextWindow.Write("n (гишүүдийн тоо) утгыг оруулна уу: ")
+n = TextWindow.ReadNumber()
+
+If q = 1 Then
+  Sn = b1 * n
+Else
+  Sn = b1 * (1 - q ^ n) / (1 - q)
+EndIf
+
+TextWindow.WriteLine("Эхний " + n + " гишүүний нийлбэр: " + Sn)

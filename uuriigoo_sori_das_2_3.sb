@@ -1,0 +1,14 @@
+GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+
+
+TextWindow.Write("n: ")
+n = TextWindow.ReadNumber()
+
+
+sum = 0
+For i = 1 To n
+ sum = sum + i
+EndFor
+
+
+TextWindow.WriteLine(sum)

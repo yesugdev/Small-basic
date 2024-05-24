@@ -1,0 +1,14 @@
+GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+TextWindow.Write("Ongo red, green, blue): ")
+colorInput = TextWindow.Read()
+GraphicsWindow.Clear()
+If colorInput = "red" Then
+TextWindow.ForegroundColor = "Red"
+ TextWindow.WriteLine("Ulaan")
+ElseIf colorInput = "green" Then
+TextWindow.ForegroundColor = "Green"
+ TextWindow.WriteLine("Nogoon")
+ElseIf colorInput = "blue" Then
+  TextWindow.ForegroundColor = "Blue"
+ TextWindow.WriteLine("Tsenher")
+EndIf

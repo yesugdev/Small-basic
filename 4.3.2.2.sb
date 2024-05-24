@@ -1,0 +1,29 @@
+Function IsPalindrome(num)
+  originalNum = num
+  reversedNum = 0
+  While num > 0
+    digit = num Mod 10
+    reversedNum = reversedNum * 10 + digit
+    num = Math.Floor(num / 10)
+  EndWhile
+  Return reversedNum = originalNum
+EndFunction
+
+' а. 10000 хүртэлх тоон дотроос палиндром тоонуудыг хэвлэх
+For j = 1 To 10000
+  If IsPalindrome(j) Then
+    TextWindow.WriteLine(j)
+  EndIf
+EndFor
+
+' б. 1000 ширхэг санамсаргүй тоон дотроос палиндром тоонуудын нийлбэрийг олж хэвлэх
+sum = 0
+For k = 1 To 1000
+  randomNum = Math.GetRandomNumber(10000) ' 1-ээс 10000 хооронд санамсаргүй тоо үүсгэнэ
+  If IsPalindrome(randomNum) Then
+    sum = sum + randomNum
+  EndIf
+EndFor
+
+TextWindow.WriteLine("Палиндром тоонуудын нийлбэр: " + sum)
+

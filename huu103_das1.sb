@@ -1,0 +1,15 @@
+GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+
+
+TextWindow.Write("'a': ")
+a = TextWindow.Read()
+TextWindow.Write("'b': ")
+b = TextWindow.Read()
+
+
+talbai = a * b
+perimetr = (a + b) * 2
+
+
+TextWindow.WriteLine("talbai: " + talbai)
+TextWindow.WriteLine("Perimetr: " + perimetr)

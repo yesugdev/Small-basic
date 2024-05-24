@@ -1,0 +1,62 @@
+GraphicsWindow.BackgroundColor = "White"
+GraphicsWindow.DrawTriangle(200, 100, 300, 200, 200, 300)
+GraphicsWindow.DrawLine(200, 100, 100, 200)
+GraphicsWindow.DrawLine(200, 100, 200, 300)
+GraphicsWindow.DrawLine(300, 200, 200, 300)
+GraphicsWindow.DrawLine(100, 200, 200, 300)
+
+
+
+
+—---------------------------------------------------
+GraphicsWindow.BackgroundColor = "White"
+GraphicsWindow.BrushColor = "LightBlue"
+
+
+
+
+houseBodyWidth = 200
+houseBodyHeight = 120
+houseBodyX = 200
+houseBodyY = 200
+GraphicsWindow.FillRectangle(houseBodyX, houseBodyY, houseBodyWidth, houseBodyHeight)
+
+
+
+
+roofWidth = houseBodyWidth + 40
+roofHeight = 100
+roofX = houseBodyX - (roofWidth - houseBodyWidth) / 2
+roofY = houseBodyY - roofHeight
+GraphicsWindow.FillTriangle(roofX, roofY + roofHeight, roofX + roofWidth / 2, roofY, roofX + roofWidth, roofY + roofHeight)
+
+
+
+
+chimneyWidth = 20
+chimneyHeight = 50
+chimneyX = roofX + (roofWidth / 2 + 10)
+chimneyY = roofY - (chimneyHeight - 20)
+GraphicsWindow.FillRectangle(chimneyX, chimneyY, chimneyWidth, chimneyHeight)
+
+
+
+
+doorWidth = 40
+doorHeight = 60
+doorX = houseBodyX + (houseBodyWidth / 2 - doorWidth / 2)
+doorY = houseBodyY + (houseBodyHeight - doorHeight)
+GraphicsWindow.BrushColor = "DarkBlue"
+GraphicsWindow.FillRectangle(doorX, doorY, doorWidth, doorHeight)
+
+
+
+
+windowWidth = 30
+windowHeight = 30
+windowX1 = houseBodyX + (doorX - houseBodyX) / 2 - windowWidth / 2
+windowY = doorY - (doorY - houseBodyY) / 2 - windowHeight / 2
+windowX2 = doorX + doorWidth + (doorX - houseBodyX) / 2 - windowWidth / 2
+GraphicsWindow.BrushColor = "LightBlue"
+GraphicsWindow.FillRectangle(windowX1, windowY, windowWidth, windowHeight)
+GraphicsWindow.FillRectangle(windowX2, windowY, windowWidth, windowHeight)

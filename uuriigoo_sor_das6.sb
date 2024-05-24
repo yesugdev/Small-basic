@@ -1,0 +1,23 @@
+GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+
+
+TextWindow.Write("x1: ")
+x1 = TextWindow.ReadNumber()
+
+
+TextWindow.Write("y1: ")
+y1 = TextWindow.ReadNumber()
+
+
+TextWindow.Write("x2: ")
+x2 = TextWindow.ReadNumber()
+
+
+TextWindow.Write("y2: ")
+y2 = TextWindow.ReadNumber()
+
+
+zai = Math.SquareRoot((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2))
+
+
+TextWindow.WriteLine("Zai: " + zai)

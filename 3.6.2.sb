@@ -1,0 +1,5 @@
+x = TextWindow.ReadNumber()
+y = TextWindow.ReadNumber()
+a = TextWindow.ReadNumber()
+GraphicsWindow.PenColor = "Dark Green"
+GraphicsWindow.DrawTriangle(x, y, x+a, y, x, y+a)

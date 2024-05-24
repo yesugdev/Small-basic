@@ -1,0 +1,18 @@
+n = 3
+a[1] = 0
+a[2] = 0
+a[3] = 0
+
+
+For i = 1 To n
+ TextWindow.Write("a[" + i + "]: ")
+ a[i] = TextWindow.ReadNumber()
+EndFor
+
+
+max = a[1]
+For i = 2 To n
+ If a[i] > max Then
+   max = a[i]
+ EndIf
+EndFor

@@ -1,0 +1,5 @@
+GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+TextWindow.Write("'r': ")
+r = TextWindow.Read()
+talbai = Math.Pi * (r * r)
+TextWindow.WriteLine(talbai)

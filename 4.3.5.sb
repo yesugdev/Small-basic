@@ -1,0 +1,21 @@
+Өгсөн хоёр тооны ихийг олдог дэд программ бичиж, дараах бодлогыг бодоорой. а. a, b тоог өсөх эрэмбээр хэвлэх; б. a, b тоог буурах эрэмбээр хэвлэх; в. a, b, c гурван тооны ихийг олох; г. a, b, c, d дөрвөн тооны ихийг олох.
+Function Max(a, b)
+  If a > b Then
+    Return a
+  Else
+    Return b
+  EndIf
+EndFunction
+
+' a, b тоог өгөгдлийн унших
+a = TextWindow.ReadNumber()
+b = TextWindow.ReadNumber()
+
+' а. a, b тоог өсөх эрэмбээр хэвлэх
+If a <= b Then
+  TextWindow.WriteLine(a)
+  TextWindow.WriteLine(b)
+Else
+  TextWindow.WriteLine(b)
+  TextWindow.WriteLine(a)
+EndIf

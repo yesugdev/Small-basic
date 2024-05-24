@@ -1,0 +1,9 @@
+Өгсөн a, b бүхэл тооны хамгийн их ерөнхий хуваагчийг олох дэд программ бичиж, өгсөн утгуудад программын үр дүнг тооцоолоорой.
+Function GCD(a, b)
+  While b <> 0
+    temp = b
+    b = a Mod b
+    a = temp
+  EndWhile
+  Return a
+EndFunction

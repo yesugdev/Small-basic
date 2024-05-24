@@ -1,0 +1,14 @@
+GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+
+
+TextWindow.Write("a: ")
+a = TextWindow.ReadNumber()
+
+
+TextWindow.Write("b: ")
+b = TextWindow.ReadNumber()
+
+
+TextWindow.WriteLine("Urjver: " + a * b)
+TextWindow.WriteLine("yalgavar: " + (a - b))
+TextWindow.WriteLine("Nogdwor: " + (a / b))

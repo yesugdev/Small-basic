@@ -1,0 +1,13 @@
+GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+
+
+GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 0, 255) ' Blue
+GraphicsWindow.DrawText(10, 10, "Minii hayag")
+
+
+GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255, 255, 0) ' Yellow
+GraphicsWindow.DrawText(10, 30, "Manai angi")
+
+
+GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 128, 0) ' Green
+GraphicsWindow.DrawText(10, 50, "Ungu")

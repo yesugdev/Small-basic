@@ -1,0 +1,17 @@
+n = 0
+uld = 0
+tongor = 0
+a = 0
+TextWindow.Write("too: ")
+n = TextWindow.ReadNumber()
+a = n
+While n <> 0
+uld = Math.Remainder(n, 10)
+tongor = tongor * 10 + uld
+n = Math.Floor(n / 10)
+EndWhile
+If a = tongor Then
+ TextWindow.WriteLine("Palindrome too")
+Else
+ TextWindow.WriteLine("Palindrome too bish")
+EndIf

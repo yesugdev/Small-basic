@@ -1,0 +1,14 @@
+a = Math.GetRandomNumber(100)
+b = Math.GetRandomNumber(100)
+If a>b Then
+   t = a
+   a = b
+   t = b
+EndIf
+For i = a To b
+   u = Math.Remainder(i, 5)
+   If u=0 Then
+       s = Math.Power(i,2)
+       TextWindow.WriteLine(s)
+   EndIf
+EndFor

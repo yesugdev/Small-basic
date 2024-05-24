@@ -1,0 +1,14 @@
+a = 0
+b = 0
+c = 0
+TextWindow.Write("a: ")
+a = TextWindow.ReadNumber()
+TextWindow.Write("b: ")
+b = TextWindow.ReadNumber()
+TextWindow.Write("c: ")
+c = TextWindow.ReadNumber()
+If a = b And a = c And b = c Then
+ TextWindow.WriteLine("Zov gurvaljin")
+ElseIf (a = b And b <> c) Or (a = c And c <> b) Or (b = c And c <> a) Then
+ TextWindow.WriteLine("Adil hajuut")
+EndIf

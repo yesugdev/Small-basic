@@ -1,0 +1,19 @@
+n = TextWindow.ReadNumber()
+
+Function IsPalindrome(num)
+  originalNum = num
+  reversedNum = 0
+  While num > 0
+    digit = num Mod 10
+    reversedNum = reversedNum * 10 + digit
+    num = Math.Floor(num / 10)
+  EndWhile
+  Return reversedNum = originalNum
+EndFunction
+
+closestPalindrome = n
+While Not IsPalindrome(closestPalindrome)
+  closestPalindrome = closestPalindrome - 1
+EndWhile
+
+TextWindow.WriteLine("Хамгийн ойр палиндром тоо: " + closestPalindrome)

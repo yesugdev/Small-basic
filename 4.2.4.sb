@@ -1,0 +1,15 @@
+number = TextWindow.ReadNumber()
+isPrime = "Үнэн"
+
+If number <= 1 Then
+  isPrime = "Худал"
+Else
+  For i = 2 To Math.Floor(Math.Sqrt(number))
+    If number Mod i = 0 Then
+      isPrime = "Худал"
+      Exit For
+    EndIf
+  EndFor
+EndIf
+
+TextWindow.WriteLine("Анхны тоо мөн: " + isPrime)

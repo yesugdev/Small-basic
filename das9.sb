@@ -1,0 +1,19 @@
+k = 0
+uld = 0
+urj = 1
+sum = 0
+
+
+TextWindow.Write("K: ")
+k = TextWindow.ReadNumber()
+
+
+While k <> 0
+ uld = Math.Remainder(k,10)
+ urj = urj * uld
+ sum = sum + uld
+ k = Math.Floor(k / 10)
+EndWhile
+
+
+TextWindow.WriteLine(urj + " " + sum)

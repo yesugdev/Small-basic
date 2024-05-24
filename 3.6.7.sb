@@ -1,0 +1,29 @@
+GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+
+
+width = 400
+height = 400
+numTriangles = 200
+
+
+For i = 1 To numTriangles
+
+
+ x1 = Math.GetRandomNumber(width)
+ y1 = Math.GetRandomNumber(height)
+ x2 = Math.GetRandomNumber(width)
+ y2 = Math.GetRandomNumber(height)
+ x3 = Math.GetRandomNumber(width)
+ y3 = Math.GetRandomNumber(height)
+
+
+
+
+ color = GraphicsWindow.GetColorFromRGB(Math.GetRandomNumber(256), Math.GetRandomNumber(256), Math.GetRandomNumber(256))
+
+
+ GraphicsWindow.DrawTriangle(x1, y1, x2, y2, x3, y3)
+ GraphicsWindow.SetPixel(x1, y1, color)
+ GraphicsWindow.SetPixel(x2, y2, color)
+ GraphicsWindow.SetPixel(x3, y3, color)
+EndFor

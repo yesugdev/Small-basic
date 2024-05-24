@@ -1,0 +1,13 @@
+star=145
+GraphicsWindow.BackgroundColor="White"
+Turtle.Speed=10
+Turtle.move (100)
+Turtle.Turn (star)
+Turtle.Move (100)
+Turtle.Turn (star)
+Turtle.Move (100)
+Turtle.Turn (star)
+Turtle.Move (100)
+Turtle.Turn (star)
+Turtle.move (100)
+Turtle.Turn (star)

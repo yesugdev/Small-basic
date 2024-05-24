@@ -1,0 +1,25 @@
+n = TextWindow.ReadNumber()
+k = TextWindow.ReadNumber()
+s = 0
+For i = 1 To n
+   t = Math.GetRandomNumber(100)
+   u = Math.Remainder(t, k)
+   If u=0 Then
+   s = s+t
+   TextWindow.Write(" "+t +" ")
+   EndIf
+EndFor
+TextWindow.WriteLine("")
+TextWindow.WriteLine("Niilber: "+s)
+
+
+
+
+n = TextWindow.ReadNumber()
+For i=1 To n
+   t = Math.GetRandomNumber(10000)
+   q = Math.SquareRoot(t)
+   If q=Math.Floor(q) Then
+       TextWindow.WriteLine(t+" too "+q+"toony quadrat bolj")
+   EndIf
+EndFor

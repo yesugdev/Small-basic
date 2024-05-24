@@ -1,0 +1,10 @@
+a = Math.GetRandomNumber(100)
+b = Math.GetRandomNumber(100)
+If a>b Then
+   t = a
+   a = b
+   t = b
+EndIf
+TextWindow.Write(a+" ")
+TextWindow.WriteLine(b+” ”)
+Санамсаргүй тоо 100 дотор сонгоод их болон багын байрыг нь сольдог программ байнаа

@@ -1,0 +1,26 @@
+GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+
+
+TextWindow.Write("2 toogoo oruul: ")
+input = TextWindow.Read()
+
+
+spaceIndex = Text.GetIndexOf(input, " ")
+a = Text.GetSubText(input, 1, spaceIndex - 1)
+b = Text.GetSubText(input, spaceIndex + 1, Text.GetLength(input) - spaceIndex)
+
+
+a = TextWindow.ReadNumber()
+b = TextWindow.ReadNumber()
+
+
+If a = b Then
+ TextWindow.WriteLine("Tentsuu")
+EndIf
+
+
+If a > b Then
+ TextWindow.WriteLine(a)
+Else
+ TextWindow.WriteLine(b)
+EndIf

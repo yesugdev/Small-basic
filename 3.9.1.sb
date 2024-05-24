@@ -1,0 +1,23 @@
+a = TextWindow.ReadNumber("a: ")
+b = TextWindow.ReadNumber("b: ")
+c = TextWindow.ReadNumber("c: ")
+d = TextWindow.ReadNumber("d: ")
+e = TextWindow.ReadNumber("e: ")
+
+
+min = a
+If b < min Then
+  min = b
+EndIf
+If c < min Then
+  min = c
+EndIf
+If d < min Then
+  min = d
+EndIf
+If e < min Then
+  min = e
+EndIf
+
+
+TextWindow.WriteLine("min: " + min)

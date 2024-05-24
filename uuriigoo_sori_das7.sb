@@ -1,0 +1,20 @@
+GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+TextWindow.Write("n: ")
+n = TextWindow.ReadNumber()
+TextWindow.Write("k: ")
+k = TextWindow.ReadNumber()
+count = 0
+number = 1
+While count < n
+ tsifr = 0
+ halaas = number
+ While halaas > 0
+   tsifr = tsifr + Math.Remainder(halaas, 10)
+   halaas = Math.Floor(halaas / 10)
+ EndWhile
+ If tsifr = k Then
+   TextWindow.Write(number + " ")
+   count = count + 1
+ EndIf
+ number = number + 1
+EndWhile

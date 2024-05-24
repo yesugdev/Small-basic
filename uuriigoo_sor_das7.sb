@@ -1,0 +1,15 @@
+GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+
+
+TextWindow.Write("a: ")
+a = TextWindow.ReadNumber()
+
+
+TextWindow.Write("b: ")
+b = TextWindow.ReadNumber()
+
+
+c = Math.SquareRoot(a * a + b * b)
+
+
+TextWindow.WriteLine((a * b) / 2 + a + b + c)

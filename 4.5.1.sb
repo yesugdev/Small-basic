@@ -1,0 +1,32 @@
+	' Шугаман массив үүсгэх
+array = Array.Create(5)
+array[1] = 7
+array[2] = 3
+array[3] = 9
+array[4] = 5
+array[5] = 1
+
+' Хамгийн их утгыг олох
+maxValue = array[1]
+minValue = array[1]
+For i = 2 To Array.GetItemCount(array)
+  If array[i] > maxValue Then
+    maxValue = array[i]
+  EndIf
+  If array[i] < minValue Then
+    minValue = array[i]
+  EndIf
+EndFor
+
+' а. Хамгийн их утгыг хэвлэх
+TextWindow.WriteLine("Хамгийн их утга: " + maxValue)
+
+' б. Хамгийн их болон хамгийн бага утгыг болон тэдгээрийн дугаарыг хэвлэх
+For i = 1 To Array.GetItemCount(array)
+  If array[i] = maxValue Then
+    TextWindow.WriteLine("Хамгийн их утга: " + maxValue + " Дугаар: " + i)
+  EndIf
+  If array[i] = minValue Then
+    TextWindow.WriteLine("Хамгийн бага утга: " + minValue + " Дугаар: " + i)
+  EndIf
+EndFor

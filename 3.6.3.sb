@@ -1,0 +1,20 @@
+GraphicsWindow.BackgroundColor = "White"
+GraphicsWindow.DrawRectangle(50, 50, 100, 100)
+GraphicsWindow.BrushColor = "Red"
+GraphicsWindow.FillRectangle(50, 50, 100, 100)
+—---------------------------------------------
+GraphicsWindow.BackgroundColor = "White"
+GraphicsWindow.DrawRectangle(50, 50, 300, 100)
+GraphicsWindow.BrushColor = "Green"
+GraphicsWindow.FillRectangle(50, 50, 300, 100)
+GraphicsWindow.PenColor = "Blue"
+GraphicsWindow.DrawRectangle(50, 50, 300, 100)
+—-----------------------------------------------
+GraphicsWindow.BackgroundColor = "White"
+red = Math.GetRandomNumber(256)
+green = Math.GetRandomNumber(256)
+blue = Math.GetRandomNumber(256)
+color = GraphicsWindow.GetColorFromRGB(red, green, blue)
+GraphicsWindow.DrawEllipse(100, 100, 200, 100)
+GraphicsWindow.BrushColor = color
+GraphicsWindow.FillEllipse(100, 100, 200, 100)

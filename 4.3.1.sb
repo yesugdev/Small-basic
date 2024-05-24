@@ -1,0 +1,11 @@
+Function Prime(num)
+  If num <= 1 Then
+    Return "False"
+  EndIf
+  For i = 2 To Math.Floor(Math.Sqrt(num))
+    If num Mod i = 0 Then
+      Return "False"
+    EndIf
+  EndFor
+  Return "True"
+EndFunction

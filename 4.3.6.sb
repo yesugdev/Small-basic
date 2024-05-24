@@ -1,0 +1,17 @@
+a, b, c гурван тоогоор талаа хийсэн гурвалжин оршин байх эсэхийг тодорхойлох дэд программ бичиж, дараах утгууд дээр программын үр дүнг тооцоолно уу.
+Function CanFormTriangle(a, b, c)
+  If a + b > c And a + c > b And b + c > a Then
+    Return "Тийм"
+  Else
+    Return "Үгүй"
+  EndIf
+EndFunction
+
+' Хэрэглэгчээс a, b, ба c уртуудыг авна
+a = TextWindow.ReadNumber()
+b = TextWindow.ReadNumber()
+c = TextWindow.ReadNumber()
+
+' Гурвалжин үүсгэх боломжийг шалгах
+result = CanFormTriangle(a, b, c)
+TextWindow.WriteLine("Гурвалжин үүсгэж чадах уу: " + result)

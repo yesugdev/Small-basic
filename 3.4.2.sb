@@ -1,0 +1,8 @@
+GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+TextWindow.Write("a: ")
+a = TextWindow.ReadNumber()
+If a >= 0 Then
+ TextWindow.WriteLine("Eyreg too")
+Else
+ TextWindow.WriteLine("Sorog too")
+EndIf

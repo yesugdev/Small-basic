@@ -1,0 +1,16 @@
+GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255, 255, 255)
+
+
+TextWindow.Write("a: ")
+a = TextWindow.ReadNumber()
+
+
+TextWindow.Write("b: ")
+b = TextWindow.ReadNumber()
+
+
+s = a * b
+p = (a + b) * 2
+
+
+TextWindow.WriteLine(s + " " + p)

@@ -1,0 +1,13 @@
+n = TextWindow.ReadNumber()
+k = TextWindow.ReadNumber()
+s = 0
+For i = 1 To n
+   t = Math.GetRandomNumber(100)
+   u = Math.Remainder(t, k)
+   If u=0 Then
+   s = s+t
+   TextWindow.Write(" "+t +" ")
+   EndIf
+EndFor
+TextWindow.WriteLine("")
+TextWindow.WriteLine("Niilber: "+s)

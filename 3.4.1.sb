@@ -1,0 +1,14 @@
+TextWindow.Write("a too oruul: ")
+a = TextWindow.ReadNumber()
+TextWindow.Write("b too oruul: ")
+b = TextWindow.ReadNumber()
+TextWindow.Write("c too oruul: ")
+c = TextWindow.ReadNumber()
+min = a
+If (a+b>c) And (a+c>b) And (b+c>a) Then
+TextWindow.ForegroundColor = "Green"
+TextWindow.WriteLine(a + ", " + b + ", " + c + "talbai gurvaljin orshin baina")
+Else
+TextWindow.ForegroundColor = "Red"
+TextWindow.WriteLine(a + ", " + b + ", " + c + "talbai gurvaljin orshin baihgu")
+Endif

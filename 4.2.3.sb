@@ -1,0 +1,7 @@
+a1 = TextWindow.ReadNumber()
+d = TextWindow.ReadNumber()
+n = TextWindow.ReadNumber()
+
+Sn = (n / 2) * (2 * a1 + (n - 1) * d)
+
+TextWindow.WriteLine("Нийлбэр: " + Sn)

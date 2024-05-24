@@ -1,0 +1,5 @@
+For j = 1 To 1000
+  If Prime(j) = "True" Then
+    TextWindow.WriteLine(j)
+  EndIf
+EndFor

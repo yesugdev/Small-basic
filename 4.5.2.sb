@@ -1,0 +1,63 @@
+' Тэгш өнцөгт массив үүсгэх жишээ
+array = Array.Create(2, 3) ' 2 мөр, 3 баганатай массив
+array[1, 1] = 5
+array[1, 2] = 3
+array[1, 3] = 8
+array[2, 1] = 7
+array[2, 2] = 1
+array[2, 3] = 4
+
+rows = 2
+columns = 3
+
+' а. Мөр бүрийн хамгийн их элементийг олж массив үүсгэх
+maxRowArray = Array.Create(rows)
+For i = 1 To rows
+  max = array[i, 1]
+  For j = 2 To columns
+    If array[i, j] > max Then
+      max = array[i, j]
+    EndIf
+  EndFor
+  maxRowArray[i] = max
+  TextWindow.WriteLine("Мөр " + i + "-ийн хамгийн их элемент: " + max)
+EndFor
+
+' б. Багана бүрийн хамгийн бага элементийг олж массив үүсгэх
+minColumnArray = Array.Create(columns)
+For j = 1 To columns
+  min = array[1, j]
+  For i = 2 To rows
+    If array[i, j] < min Then
+      min = array[i, j]
+    EndIf
+  EndFor
+  minColumnArray[j] = min
+  TextWindow.WriteLine("Багана " + j + "-ийн хамгийн бага элемент: " + min)
+EndFor
+
+' в. Мөр бүрийн хамгийн их элементийн дугаарыг хэвлэх
+For i = 1 To rows
+  max = array[i, 1]
+  maxIndex = 1
+  For j = 2 To columns
+    If array[i, j] > max Then
+      max = array[i, j]
+      maxIndex = j
+    EndIf
+  EndFor
+  TextWindow.WriteLine("Мөр " + i + "-д хамгийн их элементийн байрлал: " + maxIndex)
+EndFor
+
+' г. Багана бүрийн хамгийн бага элементийн дугаарыг хэвлэх
+For j = 1 To columns
+  min = array[1, j]
+  minIndex = 1
+  For i = 2 To rows
+    If array[i, j] < min Then
+      min = array[i, j]
+      minIndex = i
+    EndIf
+  EndFor
+  TextWindow.WriteLine("Багана " + j + "-д хамгийн бага элементийн байрлал: " + minIndex)
+EndFor

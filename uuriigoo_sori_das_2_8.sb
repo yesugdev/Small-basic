@@ -1,0 +1,17 @@
+TextWindow.Write("n: ")
+n = TextWindow.ReadNumber()
+TextWindow.Write("k: ")
+k = TextWindow.ReadNumber()
+TextWindow.Write("t: ")
+t = TextWindow.ReadNumber()
+For i = 1 To n
+ If Math.Remainder(i, k) = 0 Then
+   TextWindow.Write(i + " ")
+ EndIf
+EndFor
+TextWindow.WriteLine("")
+For i = 1 To n
+ If Math.Remainder(i, 10) = t Then
+   TextWindow.Write(i + " ")
+ EndIf
+EndFor
